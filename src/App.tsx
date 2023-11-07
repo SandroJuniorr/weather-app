@@ -1,54 +1,21 @@
 import { useState } from 'react'
-import { Container, IconSearch, SearchContainer, SearchInput, WeatherContent, WeatherData, WeatherDataContent, WeatherDataIcon, WeatherDataSection, WeatherIconContainer } from './styles/app'
-import { BiSearchAlt2,BiWind,BiWater } from 'react-icons/bi'
+import { Container} from './styles/app'
 
-import clear_icon from '../src/assets/clear.png'
-import cloud_icon from '../src/assets/cloud.png'
-import drizzle_icon from '../src/assets/drizzle.png'
-import humidity_icon from '../src/assets/humidity.png'
-import rain_icon from '../src/assets/rain.png'
-import snow_icon from '../src/assets/clear.png'
-import wind_icon from '../src/assets/wind.png'
+
+
+import { Search } from './components/Search'
+import { WeatherIcon } from './components/WeatherIcon'
+import { WeatherContent } from './components/WeatherContent'
+import { WeatherData } from './components/WeatherData'
 
 function App() {
 
   return (
     <Container>
-      <SearchContainer>
-        <SearchInput />
-        <IconSearch>
-          <BiSearchAlt2 />
-        </IconSearch>
-      </SearchContainer>
-       <WeatherIconContainer>
-       <img src={cloud_icon}/>
-       </WeatherIconContainer>
-       <WeatherContent>
-        <p>24°C</p>
-        <span>Londres</span>
-       </WeatherContent>
-     <WeatherData>
-      <WeatherDataSection>
-        <WeatherDataIcon>
-
-        <BiWind/>
-        </WeatherDataIcon>
-        <WeatherDataContent>
-          <span>15 km/h</span>
-         <span>Vento</span>
-        </WeatherDataContent>
-      </WeatherDataSection>
-      <WeatherDataSection>
-      <WeatherDataIcon>
-
-<BiWater/>
-</WeatherDataIcon>
-        <WeatherDataContent>
-          <span>67%</span>
-         <span>Humidade</span>
-        </WeatherDataContent>
-      </WeatherDataSection>
-     </WeatherData>
+      <Search/>
+      <WeatherIcon/>
+      <WeatherContent/>
+      <WeatherData/>
     </Container>
   )
 }
