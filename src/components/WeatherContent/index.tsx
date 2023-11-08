@@ -1,12 +1,14 @@
+import { useWeatherData } from "../../hooks/weatherData";
 import { Container } from "./styles";
 
 
 export function WeatherContent(){
+  const {weather} = useWeatherData()
     return(
         
        <Container>
-        <p>24°C</p>
-        <span>Londres</span>
+        <p>{parseInt(weather?.main?.temp)}°C</p>
+        <span>{weather?.name}</span>
       </Container>
     )
 }
