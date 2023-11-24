@@ -7,17 +7,15 @@ import { Search } from './components/Search'
 import { WeatherIcon } from './components/WeatherIcon'
 import { WeatherContent } from './components/WeatherContent'
 import { WeatherData } from './components/WeatherData'
-import { WeatherDataProvider } from './hooks/weatherData'
+import { WeatherDataProvider, useWeatherData } from './hooks/weatherData'
+import { WeatherContainer } from './components/WeatherContainer'
 
 function App() {
-
   return (
     <WeatherDataProvider>
     <Container>
       <Search/>
-      <WeatherIcon/>
-      <WeatherContent/>
-      <WeatherData/>
+     <WeatherContainer/>
     </Container>
     </WeatherDataProvider>
   )
